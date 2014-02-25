@@ -1,0 +1,62 @@
+body { 
+	font-family: Helvetica, san-serif; 
+}
+#tweets li {
+	background-color: white;
+	height: auto;
+	border-radius: 15px;
+	border: 1px solid grey;
+	padding-left: 10px;
+	box-shadow: 5px 5px 5px grey;
+}
+#hashtags li {
+	background-color: #9EDFFF;
+	height: 30px;
+	border-radius: 10px;
+	padding-left: 10px;
+	box-shadow: 5px 5px 5px #00A8FC;
+}
+.tweet {
+	display: inline-block;
+	width: 85%;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+.dp {
+	margin-top: 5px;
+}
+.my-breakpoint .ui-block-a, .my-breakpoint .ui-block-b {
+	width: 100%;
+
+}
+.ui-block-a li, .ui-block-b li {
+	margin: 5px 2px;
+}
+.ui-block-a {
+	height: 450px;
+}
+.ui-block-b {
+	height: 200px;
+}
+
+@media all and (min-width: 36em) {
+	.my-breakpoint .ui-block-a { 
+		float: left; width:60%; 
+	}
+	.my-breakpoint .ui-block-b { 
+		float: left; width:40%; 
+	}
+	.tweet {
+		display: inline-block;
+	}
+}
+@media all and (min-width: 50em){
+	.my-breakpoint .ui-block-a { 
+		width:60%;
+		margin: 25px 10px; 
+	}
+	.my-breakpoint .ui-block-b { 
+		width:35%; 
+		margin: 25px 10px;
+	}
+}
