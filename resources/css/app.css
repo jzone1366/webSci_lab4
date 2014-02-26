@@ -9,13 +9,6 @@ body {
 	padding-left: 10px;
 	box-shadow: 5px 5px 5px grey;
 }
-#hashtags li {
-	background-color: #9EDFFF;
-	height: 30px;
-	border-radius: 10px;
-	padding-left: 10px;
-	box-shadow: 5px 5px 5px #00A8FC;
-}
 .tweet {
 	display: inline-block;
 	width: 85%;
@@ -25,20 +18,13 @@ body {
 .dp {
 	margin-top: 5px;
 }
-.my-breakpoint .ui-block-a, .my-breakpoint .ui-block-b {
+.my-breakpoint .ui-block-a, .my-breakpoint .ui-block-b, .my-breakpoint .ui-block-c {
 	width: 100%;
 
 }
 .ui-block-a li, .ui-block-b li {
 	margin: 5px 2px;
 }
-.ui-block-a {
-	height: 450px;
-}
-.ui-block-b {
-	height: 200px;
-}
-
 @media all and (min-width: 36em) {
 	.my-breakpoint .ui-block-a { 
 		float: left; width:60%; 
@@ -52,11 +38,11 @@ body {
 }
 @media all and (min-width: 50em){
 	.my-breakpoint .ui-block-a { 
-		width:60%;
-		margin: 25px 10px; 
+		width: 30%;
+		margin: 15px 10px;
 	}
 	.my-breakpoint .ui-block-b { 
-		width:35%; 
-		margin: 25px 10px;
+		width: 65%;
+		margin: 15px 10px; 
 	}
 }

@@ -1,7 +1,18 @@
-$(document).ready(function() {
+$(document).ready(function(){
 	$.ajax({
 		type: "GET",
-		url: "getTweets.php",
+		url : "getProfile.php",
+		dataType: "json",
+		success: function(profile, status) {
+			$("#profile_info").append("<h1>" + profile.name + "</h1><h2>" + profile.location + "</h2>");
+		},
+		error: function(msg) {
+			alert("There was an error: " + msg.status + " " + msg.statusText);
+		}
+	});
+	$.ajax({
+		type: "GET",
+		url: "resources/js/tweets-clean.json",
 		dataType: "json",
 		success: function(tweets, status) {
 			for(var i = 0; i < 5; i++) {
@@ -28,30 +39,6 @@ $(document).ready(function() {
 				}
 				$("#tweets li:gt(4):last").remove();
 			}, 2000);
-
-			var count = 0;
-			var j = 0;
-			while(j < 5) {
-				if(tweets[count].entities.hashtags.length != 0){
-					$("#hashtags").prepend("<li> #" + tweets[count].entities.hashtags[0].text + "</li>");
-					j++;
-				}
-				count++;
-			}
-			var timer = setInterval(function() {
-				if(count == tweets.length) {
-					count = 0;
-				}
-				while(tweets[count].entities.hashtags.length == 0){
-					count++;
-				}
-				var listItemHTML = "<li> #" + tweets[count].entities.hashtags[0].text + "</li>";
-				$(listItemHTML).hide().css('opacity',0.0).prependTo('#hashtags').slideDown('slow').animate({opacity:1.0});
-				if (count != tweets.length) {
-					count++;
-				}
-				$("#hashtags li:gt(4):last").remove();
-			}, 2200);
 		},
 		error: function(msg) {
 			alert("There was an error: " + msg.status + " " + msg.statusText);
