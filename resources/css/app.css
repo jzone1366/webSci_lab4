@@ -1,6 +1,10 @@
 body { 
 	font-family: Helvetica, san-serif; 
 }
+#profile_info {
+	background-color: yellow;
+	box-shadow: 5px 5px 50px grey;
+}
 #tweets li {
 	background-color: white;
 	height: auto;
@@ -27,10 +31,10 @@ body {
 }
 @media all and (min-width: 36em) {
 	.my-breakpoint .ui-block-a { 
-		float: left; width:60%; 
+		float: left; width:40%; 
 	}
 	.my-breakpoint .ui-block-b { 
-		float: left; width:40%; 
+		float: left; width:60%; 
 	}
 	.tweet {
 		display: inline-block;

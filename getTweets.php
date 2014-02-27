@@ -1,11 +1,10 @@
 <?php 
 	require_once "includes/config.php";
-
 	session_start();
 
 	require_once "twitteroauth/twitteroauth.php";
 
-	$twitteruser = "jzone1366";
+	$twitteruser = $_SESSION['Twitter_User_Id'];
 	$notweets = 100;
 
 	function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token_secret) {
@@ -13,7 +12,7 @@
 		return $connection;
 	}
 	
-	$connection = getConnectionWithAccessToken($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_SECRET);
+	$connection = getConnectionWithAccessToken($CONSUMER_KEY, $CONSUMER_SECRET, $_SESSION['Twitter_Access_Token'], $_SESSION['Twitter_Access_Token_Secret']);
 
 	$tweets = $connection->get("https://api.twitter.com/1.1/statuses/home_timeline.json?screen_name=".$twitteruser."&count=".$notweets);
 

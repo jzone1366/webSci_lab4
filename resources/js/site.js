@@ -12,7 +12,7 @@ $(document).ready(function(){
 	});
 	$.ajax({
 		type: "GET",
-		url: "resources/js/tweets-clean.json",
+		url: "getTweets.php",
 		dataType: "json",
 		success: function(tweets, status) {
 			for(var i = 0; i < 5; i++) {
