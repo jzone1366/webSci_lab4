@@ -1,10 +1,6 @@
 body { 
 	font-family: Helvetica, san-serif; 
 }
-#profile_info {
-	background-color: yellow;
-	box-shadow: 5px 5px 50px grey;
-}
 #tweets li {
 	background-color: white;
 	height: auto;
@@ -12,6 +8,19 @@ body {
 	border: 1px solid grey;
 	padding-left: 10px;
 	box-shadow: 5px 5px 5px grey;
+}
+
+#profile_name {
+	font-weight: bold;
+	font-size: 20px;
+}
+#info {
+	font-style: italic;
+	font-size: 16px;
+}
+#summ {
+	font-size: 14px;
+	color: grey;
 }
 .tweet {
 	display: inline-block;
@@ -31,10 +40,10 @@ body {
 }
 @media all and (min-width: 36em) {
 	.my-breakpoint .ui-block-a { 
-		float: left; width:40%; 
+		width:40%; 
 	}
 	.my-breakpoint .ui-block-b { 
-		float: left; width:60%; 
+		width:60%; 
 	}
 	.tweet {
 		display: inline-block;

@@ -4,6 +4,6 @@
 			echo "<a href='login.php'>Click Here to sign in with Twitter</a>";
 	} 
 	else {
-		include "display.html";
+		include "resources/html/display.html";
 	}
 ?>

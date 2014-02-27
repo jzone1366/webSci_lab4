@@ -1,8 +1,8 @@
 <?php
-	require_once "includes/config.php";
+	require_once "../../includes/config.php";
 	session_start();
 
-	require_once "twitteroauth/twitteroauth.php";
+	require_once "../../twitteroauth/twitteroauth.php";
 
 	$twitteruser = $_SESSION['Twitter_User_Id'];
 

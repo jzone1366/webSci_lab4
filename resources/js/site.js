@@ -1,10 +1,12 @@
 $(document).ready(function(){
 	$.ajax({
 		type: "GET",
-		url : "getProfile.php",
+		url : "resources/datafeeds/getProfile.php",
 		dataType: "json",
 		success: function(profile, status) {
-			$("#profile_info").append("<h1>" + profile.name + "</h1><h2>" + profile.location + "</h2>");
+			$("#profile_name").append(profile.name)
+			$("#info").append(profile.location);
+			$("#summ").append(profile.description);
 		},
 		error: function(msg) {
 			alert("There was an error: " + msg.status + " " + msg.statusText);
@@ -12,7 +14,7 @@ $(document).ready(function(){
 	});
 	$.ajax({
 		type: "GET",
-		url: "getTweets.php",
+		url: "resources/datafeeds/getTweets.php",
 		dataType: "json",
 		success: function(tweets, status) {
 			for(var i = 0; i < 5; i++) {
