@@ -1,2 +1,2 @@
 #webSci_lab4
-This lab reads tweets from the twitter api and displays them to the screen in a feed. It also displays hashtags that are trending as well. It uses JQuery Mobile to make the application rsponsive by using media queries and the grid system. 
+This Application uses JQuery Mobile to display information about the Authenticated User and the 100 most current tweets on their timeline in a cycling manner. OAuth is used to authenticate the user using the Twitter API. [TwitterOAuth](https://github.com/abraham/twitteroauth) library is used to connect to the API.
